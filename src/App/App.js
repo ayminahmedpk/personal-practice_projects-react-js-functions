@@ -1,8 +1,8 @@
-import LessonRoot5 from "../Lessons/1-basics-and-state/5-children-outside-JSX/LessonRoot5";
+import LessonRoot6 from "../Lessons/2-effects-and-lifecycle/1-effects (see notes)/LessonRoot6";
 
 const App = () => (
   <div>
-    <LessonRoot5/>
+    <LessonRoot6/>
   </div>
 )
 

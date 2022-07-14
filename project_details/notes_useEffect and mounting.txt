@@ -1,0 +1,32 @@
+
+
+(Note - strictmode only impacts development mode, not production code. There,
+ no such doublemounting is taking place.)
+
+React.Strictmode will mount your component twice.
+It'll mount it, unmount it, and re mount it.
+
+So:
+  Can't make component do X only once at mount (it'll mount twice).
+  Can't make component do Y only once at unmount (it'll unmount twice).
+
+The reason is, your effect should have a clean-up next to it.
+
+So in Dev mode, you should write your effect (assuming you are focusing on a
+network request or subscription) in a way that it has a cleanup returned. So
+effect happens, cleanup happens, and effect happens again. Next cleanup will
+happen at final unmount.
+
+You could try hacks to make it so that the initial mount and unmount are
+ignored, but they don't work, create hidden leaks (react is crazy unreliable
+even with refs, apparently) and the code looks horrendous and unintuitive.
+
+So, either have a cleanup inside the cleanup function, and make it so that the
+effect and cleanup can be fired multiple times (yeah, network calls will be
+replicated but hey, we're just testing in this dev mode - not producing).
+
+Alternatively, if you absolutely must make sure that an effect happens only
+once, even in dev mode with strict mode (and the extra mount/unmount), try
+using app-level state or parent state (since component level state does
+not persist through unmounts - it only persists through rerenders).
+

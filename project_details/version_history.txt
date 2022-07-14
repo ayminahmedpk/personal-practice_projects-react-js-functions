@@ -1,5 +1,12 @@
 
 
+0.1.2:
+  - useEffect triggering twice should not happen in production,
+    it's only to catch errors (like leaks, etc) in dev mode.
+  - why useEffect triggers twice (dev, strictmode, mount->unmount->mount process)
+  - useEffect
+
+
 0.1.1:
   - children outside jsx
   - default props, prop types
