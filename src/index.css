@@ -12,6 +12,13 @@ html {
   color            : whitesmoke;
 }
 
+
+button {
+  padding: 3px 6px;
+  cursor: pointer;
+}
+
+
 .lesson-root { text-align: center; }
 
 .component            { margin-top  : 4rem   ; }

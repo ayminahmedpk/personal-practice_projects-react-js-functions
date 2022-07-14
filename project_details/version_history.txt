@@ -1,5 +1,12 @@
 
 
+0.1.1:
+  - children outside jsx
+  - default props, prop types
+  - state and children
+  - stateful component
+  - simple component
+
 
 0.1.0:
   - folder cleanup
