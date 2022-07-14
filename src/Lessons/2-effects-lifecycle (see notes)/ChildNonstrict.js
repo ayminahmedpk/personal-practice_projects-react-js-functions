@@ -1,8 +1,6 @@
 // Written as old code, without worrying about React18 strict mode's double rendering
 
 import React, { useEffect } from 'react'
-import { useState } from 'react';
-import { useLayoutEffect } from 'react';
 
 const ChildNonstrict = (props) => {
 

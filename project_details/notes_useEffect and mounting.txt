@@ -1,4 +1,13 @@
 
+Basically, if it works properly without strictmode, it will work properly
+in production. Strictmode mounts twice (mount->unmount->mount) to help you find
+bugs and memory leaks when you don't have the proper cleanup.
+
+This shouldn't affect these simple non-timered console log components.
+
+
+
+
 
 (Note - strictmode only impacts development mode, not production code. There,
  no such doublemounting is taking place.)

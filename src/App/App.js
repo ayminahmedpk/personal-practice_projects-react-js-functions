@@ -1,4 +1,4 @@
-import LessonRoot6 from "../Lessons/2-effects-and-lifecycle/1-effects (see notes)/LessonRoot6";
+import LessonRoot6 from '../Lessons/2-effects-lifecycle (see notes)/LessonRoot6';
 
 const App = () => (
   <div>
