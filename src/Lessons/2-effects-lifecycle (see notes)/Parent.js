@@ -1,33 +1,35 @@
 import React from 'react'
 import { useState } from 'react';
 
-import ChildNonstrict from './ChildNonstrict';
+import Child from './Child';
 
-import ChildStrict from './ChildStrict';
+import ChildHacky from './ChildHacky';
 
 const Parent = () => {
   const [count, setCount] = useState(0);
   const [unimportant, setUnimportant] = useState(0);
-  const [mountNonstrictChild, setMountNonstrictChild] = useState(false);
-  const [mountStrictChild, setMountStrictChild] = useState(false);
+  const [childMounted, setChildMounted] = useState(false);
+  const [childHackyMounted, setChildHackyMounted] = useState(false);
   
   const makeUpdate = () => {setCount(Math.floor(Math.random() * 100));}
   const updateUnimportant= () => {setUnimportant(Math.floor(Math.random() * 100));}
-  const toggleNonstrictChild = () => {setMountNonstrictChild(!mountNonstrictChild)};
-  const toggleStrictChild = () => {setMountStrictChild(!mountStrictChild)};
+
+  const toggleChild      = () => {setChildMounted(!childMounted)}
+  const toggleChildHacky = () => {setChildHackyMounted(!childHackyMounted)}
 
   return (
     <div className="component">
       <p>Parent</p>
       <p>Parent count: {count}</p>
+      <div> <button onClick={makeUpdate}>Update count</button></div>
       <p>Unimportant count: {unimportant}</p>
-      <div> <button onClick={makeUpdate}>Update tree</button></div>
-      <div> <button onClick={updateUnimportant}>Update unimporant variable</button></div>
-      <div> <button onClick={toggleNonstrictChild}>Toggle ChildNonstrict</button> </div>
-      <div> <button onClick={toggleStrictChild}>Toggle ChildStrict (Hacky)</button> </div>
-      {mountNonstrictChild ? 
+      <div> <button onClick={updateUnimportant}>Update unimporant count</button></div>
+      <br/>
+      <div> <button onClick={toggleChild}>Toggle Child</button> </div>
+      {/* <div> <button onClick={toggleChildHacky}>Toggle Child (Hacky)</button> </div> */}
+      {childMounted ? 
         (
-          <ChildNonstrict
+          <Child
             count      = {count}
             setCount   = {setCount}
             unimportant = {unimportant}
@@ -35,16 +37,17 @@ const Parent = () => {
         )
         : ''
       }
-      {mountStrictChild ? 
+      {/*       
+      {childHackyMounted ? 
         (
-          <ChildStrict
+          <ChildHacky
             count      = {count}
             setCount   = {setCount}
             unimportant = {unimportant}
           />
         )
         : ''
-      }
+      } */}
     </div>
   )
 }

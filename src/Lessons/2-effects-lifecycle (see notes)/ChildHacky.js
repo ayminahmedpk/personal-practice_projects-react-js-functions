@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react'
 
-const ChildStrict = (props) => {
+const ChildHacky = (props) => {
 
   // Strict mode mounts twice (mount -> unmount -> mount.)
   // Local state doesn't persist beyond first unmount.
@@ -39,29 +39,11 @@ const ChildStrict = (props) => {
   )
 
 
-
-
-
-  
-  
-  // componentDidUpdate (but also on first render)
-  // useEffect(() => {console.log('[Render]');});
-  
-  // shouldComponentUpdate (only when count changes, not unimporant)
-  // useEffect(() => {
-  //   console.log('[Count changed]');
-  // }, [props.count] )
-
-  // Runs only on mount and final unmount
-  // useEffect(() => {
-  //   return (() => {console.log('[Unmount]')})
-  // }, []);
-
   return (
     <div className="component">
-      <p>ChildStrict (Hacky)</p>
+      <p>Child (Hacky)</p>
     </div>      
   )
 }
 
-export default ChildStrict;
+export default ChildHacky;
