@@ -1,7 +1,11 @@
 
 
+0.1.4:
+  - useContext
+
+
 0.1.3:
-  -useEffect and its note cleaned up a bit
+  - useEffect and its note cleaned up a bit
 
 
 0.1.2:

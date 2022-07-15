@@ -1,8 +1,8 @@
-import LessonRoot6 from '../Lessons/2-effects-lifecycle (see notes)/LessonRoot6';
+import LessonRoot7 from "../Lessons/3-context/LessonRoot7";
 
 const App = () => (
   <div>
-    <LessonRoot6/>
+    <LessonRoot7/>
   </div>
 )
 
