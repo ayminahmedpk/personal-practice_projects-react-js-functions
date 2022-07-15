@@ -1,5 +1,10 @@
 
 
+0.1.5:
+  - useReducer (passing as props)
+  - useReducer (local state)
+
+
 0.1.4:
   - useContext
 
