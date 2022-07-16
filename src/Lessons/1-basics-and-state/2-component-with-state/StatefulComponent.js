@@ -5,8 +5,10 @@ const StatefulComponent = () => {
 
   const [count, setCount] = useState(0);
 
-  const incrementHandler = () => setCount(count + 1);
-  const decrementHandler = () => setCount(count - 1);
+  // setCount using accepting function rather than object, similar to setState
+  // better for operations based on previous values
+  const incrementHandler = () => setCount(prevCount => prevCount + 1);
+  const decrementHandler = () => setCount(prevCount => prevCount - 1);
 
   return (
     <div className="component">

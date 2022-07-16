@@ -8,8 +8,8 @@ import MyContext from './MyContext'
 const Grandparent = () => {
 
   const [count, setCount] = useState(0);
-  const decrement = () => { setCount(count - 1) };
-  const increment = () => { setCount(count + 1) };
+  const decrement = () => { setCount(prevCount => (prevCount - 1)) };
+  const increment = () => { setCount(prevCount => (prevCount + 1)) };
 
   return (
     <MyContext.Provider value={{count, decrement, increment}}>
