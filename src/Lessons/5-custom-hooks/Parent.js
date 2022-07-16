@@ -4,7 +4,7 @@ import useCount from './Hooks/useCount';
 
 const Parent = () => {
   
-  const [count, increment, decrement] = useCount();
+  const [count, increment, decrement, reset] = useCount();
   
   return (
     <div className='Component'>
@@ -13,6 +13,9 @@ const Parent = () => {
       <div>
         <button onClick={decrement}>{'<'}</button>
         <button onClick={increment}>{'>'}</button>
+      </div>
+      <div>
+        <button onClick={reset}>Reset</button>
       </div>
     </div>
   )
