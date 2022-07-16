@@ -1,7 +1,13 @@
 
+
+0.1.7:
+  - custom hooks
+
+
 0.1.6:
   - improved setX calls, passing function rather than object, for more
-    reliability when working with previous value (previousVal => previousVal + 1)
+    reliability when working with previous value
+    (previousVal => previousVal + 1)
 
 
 0.1.5:

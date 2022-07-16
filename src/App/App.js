@@ -1,8 +1,8 @@
-import LessonRoot3 from "../Lessons/1-basics-and-state/3-simple-props/LessonRoot3";
+import LessonRoot10 from "../Lessons/5-custom-hooks/LessonRoot10";
 
 const App = () => (
   <div>
-    <LessonRoot3/>
+    <LessonRoot10/>
   </div>
 )
 
