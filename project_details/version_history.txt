@@ -1,5 +1,13 @@
 
 
+0.1.10:
+  - useMemo (to skip expensive function when not needed)
+  - useMemo (for object/function prop equality)
+  - useCallback
+  - memo
+
+
+
 0.1.9:
   - portals
 

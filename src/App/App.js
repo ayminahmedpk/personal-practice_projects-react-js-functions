@@ -1,7 +1,7 @@
-import LessonRoot14 from "../Lessons/7-portals/LessonRoot14";
+import LessonRoot18 from "../Lessons/8-optimization/4-useMemo-skip-function/LessonRoot18";
 
 const App = () => (
-    <LessonRoot14/>
+    <LessonRoot18/>
 )
 
 export default App;
