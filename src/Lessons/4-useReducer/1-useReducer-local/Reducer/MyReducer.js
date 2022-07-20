@@ -1,3 +1,12 @@
+
+
+import {
+  WRITE,
+  INCREMENT,
+  DECREMENT,
+  RESET
+} from './MyActionTypes';
+
 export const initialState = {
   textValue: '[default]',
   count: 0,
@@ -6,25 +15,25 @@ export const initialState = {
 export const MyReducer = (state, action) => {
   switch(action.type) {
     
-    case 'WRITE':
+    case WRITE:
       return {
         ...state,
         textValue: action.payload,
       }
 
-    case 'INCREMENT':
+    case INCREMENT:
       return {
         ...state,
         count: state.count + 1,
       }
 
-    case 'DECREMENT':
+    case DECREMENT:
       return {
         ...state,
         count: state.count - 1,
       }
 
-    case 'RESET':
+    case RESET:
       return {
         textValue: '[reset]',
         count: 100,

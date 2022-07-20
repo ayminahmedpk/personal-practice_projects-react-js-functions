@@ -1,6 +1,8 @@
 
 
 0.1.10:
+  - imporoved useReducer (imported action types in reducer)
+
   - useMemo (to skip expensive function when not needed)
   - useMemo (for object/function prop equality)
   - useCallback
