@@ -12,6 +12,7 @@ const Child = (props) => {
   useEffect(() => {console.log('[Mounted] (componentDidMount)');}, []);
   
   // shouldComponentUpdate (only when count changes, not unimporant variable)
+  // also on first mount, because technically count was changed (it was set)
   useEffect(() => {
     console.log('[Count changed] (shouldComponentUpdate - true)');
   }, [props.count] )
@@ -19,7 +20,7 @@ const Child = (props) => {
   // componentDidUpdate (any re-render, but also on first render)
   useEffect(() => {console.log('[Render] (componentDidUpdate + first render)');});
 
-  // Runs only on mount and final unmount
+  // Runs only unmount
   useEffect(() => {
     return (() => {console.log('[Unmount] (componentWillUnmount)')})
   }, []);
